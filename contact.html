@@ -6,56 +6,47 @@
   <title>Contact Us | Absolute Adventure Safaris</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    :root {
-      --primary-color: #2e7d32;
-      --accent-color: #f5c518;
-      --light-bg: #f9f9f9;
-    }
-
     body {
+      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--light-bg);
-      color: var(--primary-color);
-    }
-
-    .header {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 60px 0;
-    }
-
-    .header h1 {
-      font-size: 2.5rem;
-    }
-
-    .header p {
-      font-size: 1.2rem;
+      background-color: #f9f9f9;
     }
 
     .contact-section {
-      padding: 60px 0;
+      background-image: url('images/contact_bg.jpg'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      padding: 80px 0;
+      color: white;
     }
 
+    
+
     .contact-card {
-      background: white;
-      padding: 40px;
+      background-color: white;
+      color: #2e7d32;
       border-radius: 12px;
-      border-left: 5px solid var(--accent-color);
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
 
     .section-title {
-      color: var(--primary-color);
       font-weight: bold;
+      color: #2e7d32;
     }
 
     .whatsapp-btn {
-      background-color: #25D366;
+      background-color: #256428;
       color: white;
       padding: 12px 30px;
       font-size: 16px;
       border-radius: 6px;
       text-decoration: none;
+      display: inline-block;
       transition: background-color 0.3s ease;
     }
 
@@ -63,39 +54,24 @@
       background-color: #1ebe5d;
     }
 
-    a {
-      color: var(--primary-color);
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
     footer {
-      background-color: var(--primary-color);
+      background-color: #2e7d32;
       color: white;
       padding: 20px 0;
       text-align: center;
     }
-    .fleet-card {
-      background-color: white;
-      border-left: 4px solid #2e7d32;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      height: 100%;
-    }
-    .fleet-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 6px;
+
+    @media (max-width: 576px) {
+      .contact-card {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <!-- Header or Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">
   <img src="images/logo.png" alt="Absolute Safaris Logo" height="40">
@@ -107,53 +83,40 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="fleet.html">Fleet</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        
+
       </ul>
     </div>
   </div>
 </nav>
-  <div class="header text-center">
-    <div class="container">
-      <h1>Contact Absolute Adventure Safaris</h1>
-      <p>Your travel partner for safe, comfortable, and prompt transport services.</p>
-    </div>
-  </div>
 
-  <!-- Contact Info -->
-  <div class="container contact-section">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 contact-card">
-        <h4 class="section-title mb-4">📍 Our Office</h4>
-        <p>Terrace Close, Lower Westlands, Nairobi, Kenya</p>
-        <p><strong>Tel:</strong> +254 020 4440105/6/02</p>
-
-        <h4 class="section-title mt-4">📞 Phone Contacts</h4>
-        <p><strong>Safaricom:</strong><br>
-          +254 721 400 422<br>
-          +254 728 606 654<br>
-          +254 725 632 844</p>
-        <p><strong>Airtel:</strong><br>
-          +254 733 523 047<br>
-          +254 735 009 952<br>
-          +254 733 901 182</p>
-
-        <h4 class="section-title mt-4">📧 Email</h4>
-        <p><a href="mailto:info@absolutecabs.co.ke">info@absolutecabs.co.ke</a></p>
-
-        <h4 class="section-title mt-4">🕐 Working Hours</h4>
-        <p>24/7 service – Always here for you.</p>
-
-        <div class="text-center mt-5">
-          <a href="https://wa.me/254721400422" target="_blank" class="whatsapp-btn">
-            📲 Book Now on WhatsApp
-          </a>
+  <!-- Contact Section with Background Image -->
+  <section class="contact-section">
+    <div class="overlay">
+      <div class="container">
+        <div class="contact-card text-center">
+          <h2 class="section-title mb-4">Contact Absolute Adventure Safaris</h2>
+          <p><strong>📍 Office:</strong><br> Terrace Close, Lower Westlands, Nairobi</p>
+          <p><strong>☎️ Landline:</strong><br> +254 020 4440105/6/02</p>
+          <p><strong>📞 Safaricom:</strong><br> +254 721 400 422, +254 728 606 654, +254 725 632 844</p>
+          <p><strong>📞 Airtel:</strong><br> +254 733 523 047, +254 735 009 952, +254 733 901 182</p>
+          <p><strong>📧 Email:</strong><br>
+            <a href="mailto:info@absolutecabs.co.ke">info@absolutecabs.co.ke</a>
+          </p>
+          <p><strong>🕐 Open:</strong> 24/7 Service</p>
+          <div class="mt-4">
+            <a href="https://wa.me/254721400422" target="_blank" class="whatsapp-btn">
+              Book on WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Footer -->
   <footer>

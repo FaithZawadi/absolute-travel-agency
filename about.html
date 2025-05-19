@@ -10,22 +10,88 @@
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #f5f5f5;
+      color: #333;
     }
+
     .section-title {
       color: #2e7d32;
-      font-weight: bold;
-      margin-bottom: 1rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
     }
+
+    .info-card {
+      border: none;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-card h5 {
+      font-weight: 600;
+      color: #2e7d32;
+    }
+
     .team-card {
       border: none;
       background-color: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      border-radius: 12px;
+      text-align: center;
+      padding: 2rem 1rem;
     }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .team-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
     .footer {
       background-color: #2e7d32;
       color: white;
-      padding: 1rem;
+      padding: 1.5rem;
       text-align: center;
+      margin-top: 3rem;
+    }
+
+    .cta {
+      background-color: #e8f5e9;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cta .btn {
+      background-color: #2e7d32;
+      color: #fff;
+      font-weight: 500;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+    }
+
+    .cta .btn:hover {
+      background-color: #256428;
+    }
+
+    .navbar-nav .nav-link.active {
+      font-weight: 600;
+      color: #2e7d32 !important;
     }
   </style>
 </head>
@@ -35,16 +101,15 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">
-  <img src="images/logo.png" alt="Absolute Safaris Logo" height="40">
-</a>
-
+      <img src="images/logo.png" alt="Absolute Safaris Logo" height="40">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="fleet.html">Fleet</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -57,59 +122,78 @@
 <section class="py-5">
   <div class="container">
     <h2 class="section-title text-center">About Us</h2>
-    <p class="text-center mb-4">
+    <p class="text-center mb-5">
       Founded in 2006, Absolute Adventure Safaris is a premier transport and travel company based in Kenya.
-      We specialize in taxi services, air ticketing, car hire, hotel reservations, and safari packages. 
+      We specialize in taxi services, air ticketing, car hire, hotel reservations, and safari packages.
       Our goal is to exceed expectations through innovative, customer-focused travel solutions.
     </p>
 
-    <div class="row mb-5">
-      <div class="col-md-6">
-        <h4 class="text-success">Mission</h4>
-        <p>To grow and transform the transport industry through innovative solutions that exceed our customers' expectations.</p>
-        <h4 class="text-success">Vision</h4>
-        <p>To provide high-quality 24-hour transport services in Nairobi and its environs, prioritizing comfort, safety, and quick response.</p>
+    <!-- Mission, Vision, Core Values -->
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="info-card">
+          <h5>🚀 Mission</h5>
+          <p>To grow and transform the transport industry through innovative solutions that exceed our customers' expectations.</p>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h4 class="text-success">Core Values</h4>
-        <ul>
-          <li>Upholding safety as our top priority</li>
-          <li>Understanding and tailoring to customer needs</li>
-          <li>Hiring and rewarding top-caliber employees</li>
-        </ul>
+      <div class="col-md-4">
+        <div class="info-card">
+          <h5>🎯 Vision</h5>
+          <p>To provide high-quality 24-hour transport services in Nairobi and its environs, prioritizing comfort, safety, and quick response.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-card">
+          <h5>💡 Core Values</h5>
+          <ul class="list-unstyled mb-0">
+            <li>✅ Upholding safety as our top priority</li>
+            <li>✅ Tailoring services to customer needs</li>
+            <li>✅ Hiring top-caliber employees</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <!-- Team Section -->
     <h3 class="text-center section-title">Meet Our Team</h3>
     <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card team-card text-center p-3">
-          <h5 class="card-title">Mr. Michael Njoroge</h5>
+      <div class="col-md-4 col-sm-6">
+        <div class="team-card">
+          <img src="images/michael.jpg" alt="Mr. Michael Njoroge" class="team-img">
+          <h5>Mr. Michael Njoroge</h5>
           <p class="text-muted">Managing Director</p>
           <p>Founder with over 25 years in the travel industry. Expert in marketing and customer satisfaction.</p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card team-card text-center p-3">
-          <h5 class="card-title">Mr. Mogaka Dismas</h5>
+      <div class="col-md-4 col-sm-6">
+        <div class="team-card">
+          <img src="images/mogaka.jpg" alt="Mr. Mogaka Dismas" class="team-img">
+          <h5>Mr. Mogaka Dismas</h5>
           <p class="text-muted">Operations & HR Head</p>
           <p>Skilled in fleet management and customer care. Holds a Master’s in International Studies.</p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card team-card text-center p-3">
-          <h5 class="card-title">Ms. Florence Gichovi</h5>
+      <div class="col-md-4 col-sm-6 mx-sm-auto">
+        <div class="team-card">
+          <img src="images/florence.jpg" alt="Ms. Florence Gichovi" class="team-img">
+          <h5>Ms. Florence Gichovi</h5>
           <p class="text-muted">Customer Care Manager</p>
           <p>Professional in sales and client service. Leads base operations and customer relations.</p>
         </div>
       </div>
     </div>
+
+    <!-- CTA -->
+    <div class="cta mt-5">
+      <h4>Want to travel with us or learn more?</h4>
+      <p>Reach out to our customer care team for personalized travel packages and offers.</p>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="footer mt-5">
+<footer class="footer">
   <p>&copy; 2025 Absolute Adventure Safaris. All Rights Reserved.</p>
 </footer>
 

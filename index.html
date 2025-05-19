@@ -6,6 +6,7 @@
   <title>Absolute Adventure Safaris</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -38,6 +39,85 @@
       padding: 1rem;
       text-align: center;
     }
+    .info-card {
+      border: none;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-card h5 {
+      font-weight: 600;
+      color: #2e7d32;
+    }
+
+    .team-card {
+      border: none;
+      background-color: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      border-radius: 12px;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .team-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+  
+    .fleet-card {
+      background-color: white;
+      border-left: 4px solid #2e7d32;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      height: 100%;
+    }
+    .fleet-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .cta {
+      background-color: #e8f5e9;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cta .btn {
+      background-color: #2e7d32;
+      color: #fff;
+      font-weight: 500;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+    }
+
+    .cta .btn:hover {
+      background-color: #256428;
+    }
+
+    .navbar-nav .nav-link.active {
+      font-weight: 600;
+      color: #2e7d32 !important;
+    }
   </style>
 </head>
 <body>
@@ -54,10 +134,10 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="fleet.html">Fleet</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
       </ul>
     </div>
@@ -69,67 +149,86 @@
   <div class="container">
     <h1>Explore Kenya With Absolute Adventure Safaris</h1>
     <p>Taxi Services, Air Ticketing, Hotel Reservations, and Tours – All in One</p>
-    <a href="#services" class="btn btn-warning btn-lg mt-3">Get Started</a>
+    <a href="#about" class="btn btn-success">About Us</a>
   </div>
 </section>
-
+<br>
 <!-- About Section -->
 <section class="py-5">
   <div class="container">
     <h2 class="section-title text-center">About Us</h2>
-    <p class="text-center mb-4">
+    <p class="text-center mb-5">
       Founded in 2006, Absolute Adventure Safaris is a premier transport and travel company based in Kenya.
-      We specialize in taxi services, air ticketing, car hire, hotel reservations, and safari packages. 
+      We specialize in taxi services, air ticketing, car hire, hotel reservations, and safari packages.
       Our goal is to exceed expectations through innovative, customer-focused travel solutions.
     </p>
 
-    <div class="row mb-5">
-      <div class="col-md-6">
-        <h4 class="text-success">Mission</h4>
-        <p>To grow and transform the transport industry through innovative solutions that exceed our customers' expectations.</p>
-        <h4 class="text-success">Vision</h4>
-        <p>To provide high-quality 24-hour transport services in Nairobi and its environs, prioritizing comfort, safety, and quick response.</p>
+    <!-- Mission, Vision, Core Values -->
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="info-card">
+          <h5>🚀 Mission</h5>
+          <p>To grow and transform the transport industry through innovative solutions that exceed our customers' expectations.</p>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h4 class="text-success">Core Values</h4>
-        <ul>
-          <li>Upholding safety as our top priority</li>
-          <li>Understanding and tailoring to customer needs</li>
-          <li>Hiring and rewarding top-caliber employees</li>
-        </ul>
+      <div class="col-md-4">
+        <div class="info-card">
+          <h5>🎯 Vision</h5>
+          <p>To provide high-quality 24-hour transport services in Nairobi and its environs, prioritizing comfort, safety, and quick response.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-card">
+          <h5>💡 Core Values</h5>
+          <ul class="list-unstyled mb-0">
+            <li>✅ Upholding safety as our top priority</li>
+            <li>✅ Tailoring services to customer needs</li>
+            <li>✅ Hiring top-caliber employees</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <!-- Team Section -->
     <h3 class="text-center section-title">Meet Our Team</h3>
     <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card team-card text-center p-3">
-          <h5 class="card-title">Mr. Michael Njoroge</h5>
+      <div class="col-md-4 col-sm-6">
+        <div class="team-card">
+          <img src="images/michael.jpg" alt="Mr. Michael Njoroge" class="team-img">
+          <h5>Mr. Michael Njoroge</h5>
           <p class="text-muted">Managing Director</p>
           <p>Founder with over 25 years in the travel industry. Expert in marketing and customer satisfaction.</p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card team-card text-center p-3">
-          <h5 class="card-title">Mr. Mogaka Dismas</h5>
+      <div class="col-md-4 col-sm-6">
+        <div class="team-card">
+          <img src="images/mogaka.jpg" alt="Mr. Mogaka Dismas" class="team-img">
+          <h5>Mr. Mogaka Dismas</h5>
           <p class="text-muted">Operations & HR Head</p>
           <p>Skilled in fleet management and customer care. Holds a Master’s in International Studies.</p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card team-card text-center p-3">
-          <h5 class="card-title">Ms. Florence Gichovi</h5>
+      <div class="col-md-4 col-sm-6 mx-sm-auto">
+        <div class="team-card">
+          <img src="images/florence.jpg" alt="Ms. Florence Gichovi" class="team-img">
+          <h5>Ms. Florence Gichovi</h5>
           <p class="text-muted">Customer Care Manager</p>
           <p>Professional in sales and client service. Leads base operations and customer relations.</p>
         </div>
       </div>
     </div>
+
+    <!-- CTA -->
+    <div class="cta mt-5">
+      <h4>Want to travel with us or learn more?</h4>
+      <p>Reach out to our customer care team for personalized travel packages and offers.</p>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </div>
   </div>
 </section>
-
+<br>
 <!-- Services Section -->
-<section class="py-5">
+<section id="services" class="py-5">
   <div class="container">
     <h2 class="section-title text-center mb-4">Our Services</h2>
     
@@ -175,8 +274,9 @@
     </div>
   </div>
 </section>
+<br>
 <!-- Fleet Section -->
-<section class="py-5">
+<section id="fleet" class="py-5">
   <div class="container">
     <h2 class="section-title text-center mb-4">Our Fleet</h2>
     <p class="text-center mb-5">Reliable. Comfortable. Safe. Explore our wide range of vehicles available for hire 24/7.</p>
@@ -184,35 +284,35 @@
     <div class="row g-4">
       <div class="col-md-4">
         <div class="fleet-card">
-          <img src="https://source.unsplash.com/800x600/?car,toyota" alt="Sedans and Wagons" class="fleet-img mb-3">
+          <img src="images/service2.png" alt="Sedans and Wagons" class="fleet-img mb-3">
           <h5 class="text-success">Sedans & Station Wagons</h5>
           <p>Over 50 clean, GPS-tracked vehicles available for airport transfers, corporate rides, and daily hire.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="fleet-card">
-          <img src="https://source.unsplash.com/800x600/?van,car" alt="Noah Vans" class="fleet-img mb-3">
+          <img src="images/download.jpg" alt="Noah Vans" class="fleet-img mb-3">
           <h5 class="text-success">Noah Vans (6-Seaters)</h5>
           <p>Comfortable family and group travel options with spacious seating and modern amenities.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="fleet-card">
-          <img src="https://source.unsplash.com/800x600/?safari,vehicle" alt="Safari Minivans" class="fleet-img mb-3">
+          <img src="images/images (1).jpg" alt="Safari Minivans" class="fleet-img mb-3">
           <h5 class="text-success">Safari Minivans (9-Seaters)</h5>
           <p>Perfect for adventures and game drives, equipped with pop-up roofs and experienced safari drivers.</p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="fleet-card">
-          <img src="https://source.unsplash.com/800x600/?bus,transport" alt="Tour Buses" class="fleet-img mb-3">
+          <img src="images/images (2).jpg" alt="Tour Buses" class="fleet-img mb-3">
           <h5 class="text-success">Tour Buses (28-Seaters)</h5>
           <p>Ideal for large group travel, corporate events, or conferences. Clean, safe, and comfortable rides.</p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="fleet-card">
-          <img src="https://source.unsplash.com/800x600/?4x4,toyota" alt="Toyota Prado" class="fleet-img mb-3">
+          <img src="images/images (3).jpg" alt="Toyota Prado" class="fleet-img mb-3">
           <h5 class="text-success">Toyota Prados</h5>
           <p>Executive rides and luxury travel. Suited for VIPs, executives, or high-end travel experiences.</p>
         </div>

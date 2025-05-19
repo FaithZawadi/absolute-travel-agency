@@ -1,56 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us | Absolute Adventure Safaris</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    .whatsapp-btn {
-      background-color: #25D366;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 16px;
-      transition: background-color 0.3s;
+    :root {
+      --primary-color: #002147;
+      --accent-color: #f5c518;
+      --light-bg: #f9f9f9;
     }
 
-    .whatsapp-btn:hover {
-      background-color: #1ebe5d;
-      color: #fff;
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--primary-color);
+    }
+
+    .header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 60px 0;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
     }
 
     .contact-section {
       padding: 60px 0;
-      background: #f9f9f9;
     }
 
     .contact-card {
-      background: #fff;
-      padding: 30px;
+      background: white;
+      padding: 40px;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      border-left: 5px solid var(--accent-color);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-title {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    .whatsapp-btn {
+      background-color: #25D366;
+      color: white;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+    }
+
+    a {
+      color: var(--primary-color);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <div class="container contact-section">
-    <div class="row justify-content-center text-center mb-5">
-      <div class="col-lg-8">
-        <h2 class="fw-bold">Contact Us</h2>
-        <p class="lead">Travel with safety. Arrive in style.</p>
-      </div>
+  <!-- Header -->
+  <div class="header text-center">
+    <div class="container">
+      <h1>Contact Absolute Adventure Safaris</h1>
+      <p>Your travel partner for safe, comfortable, and prompt transport services.</p>
     </div>
+  </div>
 
+  <!-- Contact Info -->
+  <div class="container contact-section">
     <div class="row justify-content-center">
-      <div class="col-md-8 contact-card">
-        <h4 class="mb-4">📍 Our Office</h4>
+      <div class="col-lg-8 contact-card">
+        <h4 class="section-title mb-4">📍 Our Office</h4>
         <p>Terrace Close, Lower Westlands, Nairobi, Kenya</p>
         <p><strong>Tel:</strong> +254 020 4440105/6/02</p>
 
-        <h4 class="mt-4">📞 Phone Contacts</h4>
+        <h4 class="section-title mt-4">📞 Phone Contacts</h4>
         <p><strong>Safaricom:</strong><br>
           +254 721 400 422<br>
           +254 728 606 654<br>
@@ -60,22 +107,27 @@
           +254 735 009 952<br>
           +254 733 901 182</p>
 
-        <h4 class="mt-4">📧 Email</h4>
+        <h4 class="section-title mt-4">📧 Email</h4>
         <p><a href="mailto:info@absolutecabs.co.ke">info@absolutecabs.co.ke</a></p>
 
-        <h4 class="mt-4">🕐 Operating Hours</h4>
-        <p>We operate 24 hours a day, 7 days a week — including holidays.</p>
+        <h4 class="section-title mt-4">🕐 Working Hours</h4>
+        <p>24/7 service – Always here for you.</p>
 
         <div class="text-center mt-5">
-          <a href="https://wa.me/254721400422" target="_blank">
-            <button class="whatsapp-btn">
-              📲 Book Now on WhatsApp
-            </button>
+          <a href="https://wa.me/254721400422" target="_blank" class="whatsapp-btn">
+            📲 Book Now on WhatsApp
           </a>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Absolute Adventure Safaris Ltd. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
